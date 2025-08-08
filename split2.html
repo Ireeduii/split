@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        margin: 0 0;
+      }
+      .red {
+        height: 100vh;
+        background-color: red;
+      }
+
+      .blue {
+        height: 100vh;
+        background-color: blue;
+      }
+
+      .orange {
+        height: 100vh;
+        background-color: orange;
+      }
+
+      .yellow {
+        height: 100vh;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+      const red = document.createElement("div");
+      const blue = document.createElement("div");
+      const orange = document.createElement("div");
+      const yellow = document.createElement("div");
+
+      red.classList.add("red");
+      blue.classList.add("blue");
+      orange.classList.add("orange");
+      yellow.classList.add("yellow");
+
+      red.style.width = "50%";
+      blue.style.width = "50%";
+      orange.style.width = "50%";
+      yellow.style.width = "50%";
+
+      red.addEventListener("click", () => {
+        const currentWidth = parseInt(getComputedStyle(red).width);
+        const newWidth = currentWidth + 10;
+        red.style.width = newWidth + "px";
+
+        const width = parseInt(getComputedStyle(blue).width);
+        const nWidth = width - 10;
+        blue.style.width = nWidth + "px";
+
+        const wid = parseInt(getComputedStyle(orange).width);
+        const w = wid - 10;
+        blue.style.width = w + "px";
+
+        const q = parseInt(getComputedStyle(yellow).width);
+        const p = q - 10;
+        blue.style.width = p + "px";
+      });
+
+      blue.addEventListener("click", () => {
+        const currentWidth = parseInt(getComputedStyle(blue).width);
+        const newWidth = currentWidth + 10;
+        blue.style.width = newWidth + "px";
+
+        const width = parseInt(getComputedStyle(red).width);
+        const nWidth = width - 10;
+        red.style.width = nWidth + "px";
+
+        const wid = parseInt(getComputedStyle(orange).width);
+        const w = wid - 10;
+        blue.style.width = w + "px";
+
+        const q = parseInt(getComputedStyle(yellow).width);
+        const p = q - 10;
+        blue.style.width = p + "px";
+      });
+
+      orange.addEventListener("click", () => {
+        const currentWidth = parseInt(getComputedStyle(orange).width);
+        const newWidth = currentWidth + 10;
+        orange.style.width = newWidth + "px";
+
+        const width = parseInt(getComputedStyle(blue).width);
+        const nWidth = width - 10;
+        red.blue.yellow.style.width = nWidth + "px";
+      });
+
+      yellow.addEventListener("click", () => {
+        const currentWidth = parseInt(getComputedStyle(yellow).width);
+        const newWidth = currentWidth + 10;
+        yellow.style.width = newWidth + "px";
+
+        const width = parseInt(getComputedStyle(blue).width);
+        const nWidth = width - 10;
+        yellow.style.width = nWidth + "px";
+      });
+
+      body.appendChild(red);
+      body.appendChild(blue);
+      body.appendChild(orange);
+      body.appendChild(yellow);
+
+      document.addEventListener("keypress", (event) => {
+        if (event.key === " ") {
+          const currentWidth = parseInt(getComputedStyle(red).width);
+          const newWidth = currentWidth + 10 + "%";
+
+          const width = parseInt(getComputedStyle(blue).width);
+          const nWidth = width - 10;
+        } else if (event.key === "Enter") {
+          const currentWidth = parseInt(getComputedStyle(blue).width);
+          const newWidth = currentWidth + 10 + "%";
+
+          const width = parseInt(getComputedStyle(red).width);
+          const nWidth = width - 10;
+        } else if ( event.key === )
+      });
+    </script>
+  </body>
+</html>

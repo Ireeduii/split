@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Display-split</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        height: 100vh;
+      }
+      .box {
+        flex: 1;
+        transition: flex 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(52, 8, 8);
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .left {
+        background: rgb(188, 71, 90);
+      }
+      .right {
+        background: pink;
+      }
+      .active {
+        flex: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box left">left-side :*</div>
+    <div class="box right">right-side :*</div>
+    <script>
+      const boxes = document.querySelectorAll(".box");
+      boxes.forEach((box) => {
+        box.addEventListener("click", () => {
+          boxes.forEach((b) => b.classList.remove("active"));
+          box.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
